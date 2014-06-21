@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>AGSGeomUtils.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>NonEmbedded.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>SwiftMap.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>D95030481956023400BFC52C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D95030521956023400BFC52C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D950306F1956024B00BFC52C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D95030791956024B00BFC52C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D973872919548C2D007F700A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D973873B19548C2D007F700A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

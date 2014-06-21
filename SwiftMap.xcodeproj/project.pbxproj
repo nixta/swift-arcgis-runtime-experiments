@@ -1,0 +1,802 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D950304E1956023400BFC52C /* AGSGeomUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = D950304D1956023400BFC52C /* AGSGeomUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D95030541956023400BFC52C /* AGSGeomUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95030491956023400BFC52C /* AGSGeomUtils.framework */; };
+		D950305B1956023500BFC52C /* AGSGeomUtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D950305A1956023500BFC52C /* AGSGeomUtilsTests.swift */; };
+		D950305E1956023500BFC52C /* AGSGeomUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95030491956023400BFC52C /* AGSGeomUtils.framework */; };
+		D950305F1956023500BFC52C /* AGSGeomUtils.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D95030491956023400BFC52C /* AGSGeomUtils.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		D950308D1956029100BFC52C /* AGSGeometryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D973874C1954A11C007F700A /* AGSGeometryView.swift */; };
+		D950308E1956029100BFC52C /* AGSPrototyping.swift in Sources */ = {isa = PBXBuildFile; fileRef = D973874D1954A11C007F700A /* AGSPrototyping.swift */; };
+		D950308F1956029100BFC52C /* AGSPoint+debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = D973874E1954A11C007F700A /* AGSPoint+debug.swift */; };
+		D95030901956029100BFC52C /* AGSPolyline+debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = D973874F1954A11C007F700A /* AGSPolyline+debug.swift */; };
+		D95030911956029100BFC52C /* AGSPolygon+debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97387501954A11C007F700A /* AGSPolygon+debug.swift */; };
+		D9503096195619FD00BFC52C /* ArcGIS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9503094195619C100BFC52C /* ArcGIS.framework */; };
+		D973873019548C2D007F700A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D973872F19548C2D007F700A /* AppDelegate.swift */; };
+		D973873219548C2D007F700A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D973873119548C2D007F700A /* ViewController.swift */; };
+		D973873519548C2D007F700A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D973873319548C2D007F700A /* Main.storyboard */; };
+		D973873719548C2D007F700A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D973873619548C2D007F700A /* Images.xcassets */; };
+		D973874319548C2D007F700A /* SwiftMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D973874219548C2D007F700A /* SwiftMapTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D95030551956023400BFC52C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D973872219548C2D007F700A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D95030481956023400BFC52C;
+			remoteInfo = AGSGeomUtils;
+		};
+		D950305C1956023500BFC52C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D973872219548C2D007F700A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D95030481956023400BFC52C;
+			remoteInfo = AGSGeomUtils;
+		};
+		D95030601956023500BFC52C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D973872219548C2D007F700A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D95030481956023400BFC52C;
+			remoteInfo = AGSGeomUtils;
+		};
+		D95030691956023600BFC52C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D973872219548C2D007F700A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D95030481956023400BFC52C;
+			remoteInfo = AGSGeomUtils;
+		};
+		D950307B1956024B00BFC52C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D973872219548C2D007F700A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D95030481956023400BFC52C;
+			remoteInfo = AGSGeomUtils;
+		};
+		D95030921956073300BFC52C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D973872219548C2D007F700A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D95030481956023400BFC52C;
+			remoteInfo = AGSGeomUtils;
+		};
+		D973873D19548C2D007F700A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D973872219548C2D007F700A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D973872919548C2D007F700A;
+			remoteInfo = SwiftMap;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D95030671956023500BFC52C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D950305F1956023500BFC52C /* AGSGeomUtils.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		D95030491956023400BFC52C /* AGSGeomUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AGSGeomUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D950304C1956023400BFC52C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D950304D1956023400BFC52C /* AGSGeomUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AGSGeomUtils.h; sourceTree = "<group>"; };
+		D95030531956023400BFC52C /* AGSGeomUtilsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AGSGeomUtilsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D95030591956023500BFC52C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D950305A1956023500BFC52C /* AGSGeomUtilsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGSGeomUtilsTests.swift; sourceTree = "<group>"; };
+		D9503094195619C100BFC52C /* ArcGIS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ArcGIS.framework; path = ../../../../../Library/SDKs/ArcGIS/iOS/ArcGIS.framework; sourceTree = "<group>"; };
+		D973872A19548C2D007F700A /* SwiftMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D973872E19548C2D007F700A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D973872F19548C2D007F700A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D973873119548C2D007F700A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D973873419548C2D007F700A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D973873619548C2D007F700A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D973873C19548C2D007F700A /* SwiftMapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftMapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D973874119548C2D007F700A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D973874219548C2D007F700A /* SwiftMapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftMapTests.swift; sourceTree = "<group>"; };
+		D973874C1954A11C007F700A /* AGSGeometryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AGSGeometryView.swift; path = ../SwiftMap/AGSGeometryView.swift; sourceTree = "<group>"; };
+		D973874D1954A11C007F700A /* AGSPrototyping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AGSPrototyping.swift; path = ../SwiftMap/AGSPrototyping.swift; sourceTree = "<group>"; };
+		D973874E1954A11C007F700A /* AGSPoint+debug.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "AGSPoint+debug.swift"; path = "../SwiftMap/AGSPoint+debug.swift"; sourceTree = "<group>"; };
+		D973874F1954A11C007F700A /* AGSPolyline+debug.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "AGSPolyline+debug.swift"; path = "../SwiftMap/AGSPolyline+debug.swift"; sourceTree = "<group>"; };
+		D97387501954A11C007F700A /* AGSPolygon+debug.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "AGSPolygon+debug.swift"; path = "../SwiftMap/AGSPolygon+debug.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D95030451956023400BFC52C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9503096195619FD00BFC52C /* ArcGIS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D95030501956023400BFC52C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D95030541956023400BFC52C /* AGSGeomUtils.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D973872719548C2D007F700A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D950305E1956023500BFC52C /* AGSGeomUtils.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D973873919548C2D007F700A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D950304A1956023400BFC52C /* AGSGeomUtils */ = {
+			isa = PBXGroup;
+			children = (
+				D950304D1956023400BFC52C /* AGSGeomUtils.h */,
+				D973874C1954A11C007F700A /* AGSGeometryView.swift */,
+				D973874D1954A11C007F700A /* AGSPrototyping.swift */,
+				D973874E1954A11C007F700A /* AGSPoint+debug.swift */,
+				D973874F1954A11C007F700A /* AGSPolyline+debug.swift */,
+				D97387501954A11C007F700A /* AGSPolygon+debug.swift */,
+				D950304B1956023400BFC52C /* Supporting Files */,
+			);
+			path = AGSGeomUtils;
+			sourceTree = "<group>";
+		};
+		D950304B1956023400BFC52C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D9503094195619C100BFC52C /* ArcGIS.framework */,
+				D950304C1956023400BFC52C /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D95030571956023400BFC52C /* AGSGeomUtilsTests */ = {
+			isa = PBXGroup;
+			children = (
+				D950305A1956023500BFC52C /* AGSGeomUtilsTests.swift */,
+				D95030581956023500BFC52C /* Supporting Files */,
+			);
+			path = AGSGeomUtilsTests;
+			sourceTree = "<group>";
+		};
+		D95030581956023500BFC52C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D95030591956023500BFC52C /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D973872119548C2D007F700A = {
+			isa = PBXGroup;
+			children = (
+				D973872C19548C2D007F700A /* SwiftMap */,
+				D973873F19548C2D007F700A /* SwiftMapTests */,
+				D950304A1956023400BFC52C /* AGSGeomUtils */,
+				D95030571956023400BFC52C /* AGSGeomUtilsTests */,
+				D973872B19548C2D007F700A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D973872B19548C2D007F700A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D973872A19548C2D007F700A /* SwiftMap.app */,
+				D973873C19548C2D007F700A /* SwiftMapTests.xctest */,
+				D95030491956023400BFC52C /* AGSGeomUtils.framework */,
+				D95030531956023400BFC52C /* AGSGeomUtilsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D973872C19548C2D007F700A /* SwiftMap */ = {
+			isa = PBXGroup;
+			children = (
+				D973872F19548C2D007F700A /* AppDelegate.swift */,
+				D973873119548C2D007F700A /* ViewController.swift */,
+				D973873319548C2D007F700A /* Main.storyboard */,
+				D973873619548C2D007F700A /* Images.xcassets */,
+				D973872D19548C2D007F700A /* Supporting Files */,
+			);
+			path = SwiftMap;
+			sourceTree = "<group>";
+		};
+		D973872D19548C2D007F700A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D973872E19548C2D007F700A /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D973873F19548C2D007F700A /* SwiftMapTests */ = {
+			isa = PBXGroup;
+			children = (
+				D973874219548C2D007F700A /* SwiftMapTests.swift */,
+				D973874019548C2D007F700A /* Supporting Files */,
+			);
+			path = SwiftMapTests;
+			sourceTree = "<group>";
+		};
+		D973874019548C2D007F700A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D973874119548C2D007F700A /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D95030461956023400BFC52C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D950304E1956023400BFC52C /* AGSGeomUtils.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D95030481956023400BFC52C /* AGSGeomUtils */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D95030661956023500BFC52C /* Build configuration list for PBXNativeTarget "AGSGeomUtils" */;
+			buildPhases = (
+				D95030441956023400BFC52C /* Sources */,
+				D95030451956023400BFC52C /* Frameworks */,
+				D95030461956023400BFC52C /* Headers */,
+				D95030471956023400BFC52C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AGSGeomUtils;
+			productName = AGSGeomUtils;
+			productReference = D95030491956023400BFC52C /* AGSGeomUtils.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D95030521956023400BFC52C /* AGSGeomUtilsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D95030681956023500BFC52C /* Build configuration list for PBXNativeTarget "AGSGeomUtilsTests" */;
+			buildPhases = (
+				D950304F1956023400BFC52C /* Sources */,
+				D95030501956023400BFC52C /* Frameworks */,
+				D95030511956023400BFC52C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D95030561956023400BFC52C /* PBXTargetDependency */,
+				D950306A1956023600BFC52C /* PBXTargetDependency */,
+				D950307C1956024B00BFC52C /* PBXTargetDependency */,
+				D95030931956073300BFC52C /* PBXTargetDependency */,
+			);
+			name = AGSGeomUtilsTests;
+			productName = AGSGeomUtilsTests;
+			productReference = D95030531956023400BFC52C /* AGSGeomUtilsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D973872919548C2D007F700A /* SwiftMap */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D973874619548C2D007F700A /* Build configuration list for PBXNativeTarget "SwiftMap" */;
+			buildPhases = (
+				D973872619548C2D007F700A /* Sources */,
+				D973872719548C2D007F700A /* Frameworks */,
+				D973872819548C2D007F700A /* Resources */,
+				D95030671956023500BFC52C /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D950305D1956023500BFC52C /* PBXTargetDependency */,
+				D95030611956023500BFC52C /* PBXTargetDependency */,
+			);
+			name = SwiftMap;
+			productName = SwiftMap;
+			productReference = D973872A19548C2D007F700A /* SwiftMap.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D973873B19548C2D007F700A /* SwiftMapTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D973874919548C2D007F700A /* Build configuration list for PBXNativeTarget "SwiftMapTests" */;
+			buildPhases = (
+				D973873819548C2D007F700A /* Sources */,
+				D973873919548C2D007F700A /* Frameworks */,
+				D973873A19548C2D007F700A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D973873E19548C2D007F700A /* PBXTargetDependency */,
+			);
+			name = SwiftMapTests;
+			productName = SwiftMapTests;
+			productReference = D973873C19548C2D007F700A /* SwiftMapTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D973872219548C2D007F700A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = Esri;
+				TargetAttributes = {
+					D95030481956023400BFC52C = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					D95030521956023400BFC52C = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = D95030481956023400BFC52C;
+					};
+					D973872919548C2D007F700A = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					D973873B19548C2D007F700A = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = D973872919548C2D007F700A;
+					};
+				};
+			};
+			buildConfigurationList = D973872519548C2D007F700A /* Build configuration list for PBXProject "SwiftMap" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D973872119548C2D007F700A;
+			productRefGroup = D973872B19548C2D007F700A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D973872919548C2D007F700A /* SwiftMap */,
+				D973873B19548C2D007F700A /* SwiftMapTests */,
+				D95030481956023400BFC52C /* AGSGeomUtils */,
+				D95030521956023400BFC52C /* AGSGeomUtilsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D95030471956023400BFC52C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D95030511956023400BFC52C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D973872819548C2D007F700A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D973873519548C2D007F700A /* Main.storyboard in Resources */,
+				D973873719548C2D007F700A /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D973873A19548C2D007F700A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D95030441956023400BFC52C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D950308D1956029100BFC52C /* AGSGeometryView.swift in Sources */,
+				D950308F1956029100BFC52C /* AGSPoint+debug.swift in Sources */,
+				D950308E1956029100BFC52C /* AGSPrototyping.swift in Sources */,
+				D95030911956029100BFC52C /* AGSPolygon+debug.swift in Sources */,
+				D95030901956029100BFC52C /* AGSPolyline+debug.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D950304F1956023400BFC52C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D950305B1956023500BFC52C /* AGSGeomUtilsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D973872619548C2D007F700A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D973873219548C2D007F700A /* ViewController.swift in Sources */,
+				D973873019548C2D007F700A /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D973873819548C2D007F700A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D973874319548C2D007F700A /* SwiftMapTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D95030561956023400BFC52C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D95030481956023400BFC52C /* AGSGeomUtils */;
+			targetProxy = D95030551956023400BFC52C /* PBXContainerItemProxy */;
+		};
+		D950305D1956023500BFC52C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D95030481956023400BFC52C /* AGSGeomUtils */;
+			targetProxy = D950305C1956023500BFC52C /* PBXContainerItemProxy */;
+		};
+		D95030611956023500BFC52C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D95030481956023400BFC52C /* AGSGeomUtils */;
+			targetProxy = D95030601956023500BFC52C /* PBXContainerItemProxy */;
+		};
+		D950306A1956023600BFC52C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D95030481956023400BFC52C /* AGSGeomUtils */;
+			targetProxy = D95030691956023600BFC52C /* PBXContainerItemProxy */;
+		};
+		D950307C1956024B00BFC52C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D95030481956023400BFC52C /* AGSGeomUtils */;
+			targetProxy = D950307B1956024B00BFC52C /* PBXContainerItemProxy */;
+		};
+		D95030931956073300BFC52C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D95030481956023400BFC52C /* AGSGeomUtils */;
+			targetProxy = D95030921956073300BFC52C /* PBXContainerItemProxy */;
+		};
+		D973873E19548C2D007F700A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D973872919548C2D007F700A /* SwiftMap */;
+			targetProxy = D973873D19548C2D007F700A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D973873319548C2D007F700A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D973873419548C2D007F700A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D95030621956023500BFC52C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
+				CLANG_MODULES_AUTOLINK = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = "$(USER_LIBRARY_DIR)/SDKs/ArcGIS/iOS";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = AGSGeomUtils/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LLVM_LTO = NO;
+				METAL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-l",
+					"c++",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D95030631956023500BFC52C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
+				CLANG_MODULES_AUTOLINK = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = "$(USER_LIBRARY_DIR)/SDKs/ArcGIS/iOS";
+				INFOPLIST_FILE = AGSGeomUtils/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LLVM_LTO = NO;
+				METAL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-l",
+					"c++",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D95030641956023500BFC52C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = AGSGeomUtilsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D95030651956023500BFC52C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = AGSGeomUtilsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		D973874419548C2D007F700A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				METAL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D973874519548C2D007F700A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				METAL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D973874719548C2D007F700A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = "$(USER_LIBRARY_DIR)/SDKs/ArcGIS/iOS";
+				INFOPLIST_FILE = SwiftMap/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-l",
+					"c++",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D973874819548C2D007F700A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = "$(USER_LIBRARY_DIR)/SDKs/ArcGIS/iOS";
+				INFOPLIST_FILE = SwiftMap/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-l",
+					"c++",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		D973874A19548C2D007F700A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SwiftMap.app/SwiftMap";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SwiftMapTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		D973874B19548C2D007F700A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SwiftMap.app/SwiftMap";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SwiftMapTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D95030661956023500BFC52C /* Build configuration list for PBXNativeTarget "AGSGeomUtils" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D95030621956023500BFC52C /* Debug */,
+				D95030631956023500BFC52C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D95030681956023500BFC52C /* Build configuration list for PBXNativeTarget "AGSGeomUtilsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D95030641956023500BFC52C /* Debug */,
+				D95030651956023500BFC52C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D973872519548C2D007F700A /* Build configuration list for PBXProject "SwiftMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D973874419548C2D007F700A /* Debug */,
+				D973874519548C2D007F700A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D973874619548C2D007F700A /* Build configuration list for PBXNativeTarget "SwiftMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D973874719548C2D007F700A /* Debug */,
+				D973874819548C2D007F700A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D973874919548C2D007F700A /* Build configuration list for PBXNativeTarget "SwiftMapTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D973874A19548C2D007F700A /* Debug */,
+				D973874B19548C2D007F700A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D973872219548C2D007F700A /* Project object */;
+}
