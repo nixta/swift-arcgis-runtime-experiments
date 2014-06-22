@@ -13,11 +13,12 @@
 		D950305E1956023500BFC52C /* AGSGeomUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95030491956023400BFC52C /* AGSGeomUtils.framework */; };
 		D950305F1956023500BFC52C /* AGSGeomUtils.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D95030491956023400BFC52C /* AGSGeomUtils.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		D950308D1956029100BFC52C /* AGSGeometryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D973874C1954A11C007F700A /* AGSGeometryView.swift */; };
-		D950308E1956029100BFC52C /* AGSPrototyping.swift in Sources */ = {isa = PBXBuildFile; fileRef = D973874D1954A11C007F700A /* AGSPrototyping.swift */; };
+		D950308E1956029100BFC52C /* AGSOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = D973874D1954A11C007F700A /* AGSOperators.swift */; };
 		D950308F1956029100BFC52C /* AGSPoint+debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = D973874E1954A11C007F700A /* AGSPoint+debug.swift */; };
 		D95030901956029100BFC52C /* AGSPolyline+debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = D973874F1954A11C007F700A /* AGSPolyline+debug.swift */; };
 		D95030911956029100BFC52C /* AGSPolygon+debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97387501954A11C007F700A /* AGSPolygon+debug.swift */; };
 		D9503096195619FD00BFC52C /* ArcGIS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9503094195619C100BFC52C /* ArcGIS.framework */; };
+		D95F383B1957570E00666FA7 /* AGSGeometryView_IBGeometries.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95F383A1957570E00666FA7 /* AGSGeometryView_IBGeometries.swift */; };
 		D973873019548C2D007F700A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D973872F19548C2D007F700A /* AppDelegate.swift */; };
 		D973873219548C2D007F700A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D973873119548C2D007F700A /* ViewController.swift */; };
 		D973873519548C2D007F700A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D973873319548C2D007F700A /* Main.storyboard */; };
@@ -101,6 +102,7 @@
 		D95030591956023500BFC52C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D950305A1956023500BFC52C /* AGSGeomUtilsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AGSGeomUtilsTests.swift; path = AGSGeomUtilsTests/AGSGeomUtilsTests.swift; sourceTree = SOURCE_ROOT; };
 		D9503094195619C100BFC52C /* ArcGIS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ArcGIS.framework; path = ../../../../../Library/SDKs/ArcGIS/iOS/ArcGIS.framework; sourceTree = "<group>"; };
+		D95F383A1957570E00666FA7 /* AGSGeometryView_IBGeometries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AGSGeometryView_IBGeometries.swift; sourceTree = SOURCE_ROOT; };
 		D973872A19548C2D007F700A /* SwiftMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D973872E19548C2D007F700A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D973872F19548C2D007F700A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -111,7 +113,7 @@
 		D973874119548C2D007F700A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D973874219548C2D007F700A /* SwiftMapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftMapTests.swift; sourceTree = "<group>"; };
 		D973874C1954A11C007F700A /* AGSGeometryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AGSGeometryView.swift; path = ../SwiftMap/AGSGeometryView.swift; sourceTree = "<group>"; };
-		D973874D1954A11C007F700A /* AGSPrototyping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AGSPrototyping.swift; path = ../SwiftMap/AGSPrototyping.swift; sourceTree = "<group>"; };
+		D973874D1954A11C007F700A /* AGSOperators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AGSOperators.swift; path = ../SwiftMap/AGSOperators.swift; sourceTree = "<group>"; };
 		D973874E1954A11C007F700A /* AGSPoint+debug.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "AGSPoint+debug.swift"; path = "../SwiftMap/AGSPoint+debug.swift"; sourceTree = "<group>"; };
 		D973874F1954A11C007F700A /* AGSPolyline+debug.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "AGSPolyline+debug.swift"; path = "../SwiftMap/AGSPolyline+debug.swift"; sourceTree = "<group>"; };
 		D97387501954A11C007F700A /* AGSPolygon+debug.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "AGSPolygon+debug.swift"; path = "../SwiftMap/AGSPolygon+debug.swift"; sourceTree = "<group>"; };
@@ -160,7 +162,7 @@
 				D950304D1956023400BFC52C /* AGSGeomUtils.h */,
 				D973874C1954A11C007F700A /* AGSGeometryView.swift */,
 				D9C9B3DD195636CF00B6649E /* AGSDesignableMapView.swift */,
-				D973874D1954A11C007F700A /* AGSPrototyping.swift */,
+				D973874D1954A11C007F700A /* AGSOperators.swift */,
 				D973874E1954A11C007F700A /* AGSPoint+debug.swift */,
 				D973874F1954A11C007F700A /* AGSPolyline+debug.swift */,
 				D97387501954A11C007F700A /* AGSPolygon+debug.swift */,
@@ -172,6 +174,7 @@
 		D950304B1956023400BFC52C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D95F383A1957570E00666FA7 /* AGSGeometryView_IBGeometries.swift */,
 				D9503094195619C100BFC52C /* ArcGIS.framework */,
 				D950304C1956023400BFC52C /* Info.plist */,
 			);
@@ -441,8 +444,9 @@
 			files = (
 				D950308D1956029100BFC52C /* AGSGeometryView.swift in Sources */,
 				D9C9B3DE195636CF00B6649E /* AGSDesignableMapView.swift in Sources */,
+				D95F383B1957570E00666FA7 /* AGSGeometryView_IBGeometries.swift in Sources */,
 				D950308F1956029100BFC52C /* AGSPoint+debug.swift in Sources */,
-				D950308E1956029100BFC52C /* AGSPrototyping.swift in Sources */,
+				D950308E1956029100BFC52C /* AGSOperators.swift in Sources */,
 				D95030911956029100BFC52C /* AGSPolygon+debug.swift in Sources */,
 				D95030901956029100BFC52C /* AGSPolyline+debug.swift in Sources */,
 			);

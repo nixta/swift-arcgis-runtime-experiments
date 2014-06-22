@@ -32,6 +32,8 @@ extension AGSPolygon {
         let scaleFactor = min(frame.height/path.bounds.height, frame.width/path.bounds.width)
         var transform = CGAffineTransformConcat(CGAffineTransformMakeTranslation(-path.bounds.midX, -path.bounds.midY), CGAffineTransformMakeScale(scaleFactor, -scaleFactor))
         path.applyTransform(transform)
+        var frameCenterTransform = CGAffineTransformMakeTranslation(frame.origin.x + frame.width/2, frame.origin.y + frame.height/2)
+        path.applyTransform(frameCenterTransform)
 
         return path
     }

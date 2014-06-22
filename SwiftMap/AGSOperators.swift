@@ -98,18 +98,3 @@ var expandFactor = 1.1
     var expansion = -((env.width + env.height) / 2) * (1 - 1/expandFactor)
     return AGSGeometryEngine().bufferGeometry(item, byDistance: expansion)
 }
-
-//var p1 = AGSPolygon()
-//var p2 = AGSPolygon()
-//var p3 = AGSPolyline()
-//var p4 = AGSPoint()
-//var p5 = AGSMultipoint()
-//var b = p1 > p2
-//
-//var c = p1 + p2
-//var d = p5 - p4
-//
-//var sr = AGSSpatialReference.wgs84SpatialReference()
-//var p6 = p2 >>> sr
-
-
