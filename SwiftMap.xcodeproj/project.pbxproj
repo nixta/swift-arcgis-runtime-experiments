@@ -23,6 +23,8 @@
 		D973873519548C2D007F700A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D973873319548C2D007F700A /* Main.storyboard */; };
 		D973873719548C2D007F700A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D973873619548C2D007F700A /* Images.xcassets */; };
 		D973874319548C2D007F700A /* SwiftMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D973874219548C2D007F700A /* SwiftMapTests.swift */; };
+		D9C9B3DE195636CF00B6649E /* AGSDesignableMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C9B3DD195636CF00B6649E /* AGSDesignableMapView.swift */; };
+		D9CFE02D19562F4500AF2893 /* topo.png in Resources */ = {isa = PBXBuildFile; fileRef = D9CFE02C19562F4500AF2893 /* topo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,7 +99,7 @@
 		D950304D1956023400BFC52C /* AGSGeomUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AGSGeomUtils.h; sourceTree = "<group>"; };
 		D95030531956023400BFC52C /* AGSGeomUtilsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AGSGeomUtilsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D95030591956023500BFC52C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D950305A1956023500BFC52C /* AGSGeomUtilsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGSGeomUtilsTests.swift; sourceTree = "<group>"; };
+		D950305A1956023500BFC52C /* AGSGeomUtilsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AGSGeomUtilsTests.swift; path = AGSGeomUtilsTests/AGSGeomUtilsTests.swift; sourceTree = SOURCE_ROOT; };
 		D9503094195619C100BFC52C /* ArcGIS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ArcGIS.framework; path = ../../../../../Library/SDKs/ArcGIS/iOS/ArcGIS.framework; sourceTree = "<group>"; };
 		D973872A19548C2D007F700A /* SwiftMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D973872E19548C2D007F700A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -113,6 +115,8 @@
 		D973874E1954A11C007F700A /* AGSPoint+debug.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "AGSPoint+debug.swift"; path = "../SwiftMap/AGSPoint+debug.swift"; sourceTree = "<group>"; };
 		D973874F1954A11C007F700A /* AGSPolyline+debug.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "AGSPolyline+debug.swift"; path = "../SwiftMap/AGSPolyline+debug.swift"; sourceTree = "<group>"; };
 		D97387501954A11C007F700A /* AGSPolygon+debug.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "AGSPolygon+debug.swift"; path = "../SwiftMap/AGSPolygon+debug.swift"; sourceTree = "<group>"; };
+		D9C9B3DD195636CF00B6649E /* AGSDesignableMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AGSDesignableMapView.swift; sourceTree = "<group>"; };
+		D9CFE02C19562F4500AF2893 /* topo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +159,7 @@
 			children = (
 				D950304D1956023400BFC52C /* AGSGeomUtils.h */,
 				D973874C1954A11C007F700A /* AGSGeometryView.swift */,
+				D9C9B3DD195636CF00B6649E /* AGSDesignableMapView.swift */,
 				D973874D1954A11C007F700A /* AGSPrototyping.swift */,
 				D973874E1954A11C007F700A /* AGSPoint+debug.swift */,
 				D973874F1954A11C007F700A /* AGSPolyline+debug.swift */,
@@ -197,6 +202,7 @@
 				D973873F19548C2D007F700A /* SwiftMapTests */,
 				D950304A1956023400BFC52C /* AGSGeomUtils */,
 				D95030571956023400BFC52C /* AGSGeomUtilsTests */,
+				D9CFE02E1956310700AF2893 /* TestImages */,
 				D973872B19548C2D007F700A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -247,6 +253,14 @@
 				D973874119548C2D007F700A /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D9CFE02E1956310700AF2893 /* TestImages */ = {
+			isa = PBXGroup;
+			children = (
+				D9CFE02C19562F4500AF2893 /* topo.png */,
+			);
+			path = TestImages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -391,6 +405,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9CFE02D19562F4500AF2893 /* topo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,6 +440,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D950308D1956029100BFC52C /* AGSGeometryView.swift in Sources */,
+				D9C9B3DE195636CF00B6649E /* AGSDesignableMapView.swift in Sources */,
 				D950308F1956029100BFC52C /* AGSPoint+debug.swift in Sources */,
 				D950308E1956029100BFC52C /* AGSPrototyping.swift in Sources */,
 				D95030911956029100BFC52C /* AGSPolygon+debug.swift in Sources */,
@@ -760,6 +776,7 @@
 				D95030631956023500BFC52C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D95030681956023500BFC52C /* Build configuration list for PBXNativeTarget "AGSGeomUtilsTests" */ = {
 			isa = XCConfigurationList;
@@ -768,6 +785,7 @@
 				D95030651956023500BFC52C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D973872519548C2D007F700A /* Build configuration list for PBXProject "SwiftMap" */ = {
 			isa = XCConfigurationList;

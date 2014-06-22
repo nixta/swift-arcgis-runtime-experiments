@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZfY-Gz-oIo" customClass="AGSMapView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZfY-Gz-oIo" customClass="AGSDesignableMapView" customModule="AGSGeomUtils">
                                 <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -24,13 +24,13 @@
                                 <rect key="frame" x="260" y="261" width="200" height="199"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
-                                        <real key="value" value="6"/>
+                                        <real key="value" value="3"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                        <color key="value" red="0.51936411418118955" green="0.80141788426541072" blue="1" alpha="0.70000000000000007" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.14780019430329783" green="0.74284518494897966" blue="0.18857065704619733" alpha="0.70000000000000007" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
-                                        <color key="value" red="0.32889009180000001" green="0.51300357129999996" blue="0.64249840560000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.17582602813015979" green="0.62392378826530615" blue="0.17482513516451298" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
