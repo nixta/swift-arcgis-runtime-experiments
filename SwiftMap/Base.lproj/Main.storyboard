@@ -31,10 +31,10 @@
                                         <real key="value" value="4"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                        <color key="value" red="0.15247783587915745" green="0.76480787627551017" blue="0.19934444117140193" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.17381386861313869" green="0.7331204379562043" blue="0.19665260036496351" alpha="0.33000000000000002" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
-                                        <color key="value" red="0.86977838010204078" green="0.21265169501267514" blue="0.15665886656113617" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.91106865875912413" green="0.55782390510948909" blue="0.30522924270072993" alpha="0.58999999999999997" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
