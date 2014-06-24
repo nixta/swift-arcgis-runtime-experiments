@@ -7,21 +7,20 @@
 //
 
 import QuartzCore
-import UIKit
-import ArcGIS
 
-@IBDesignable
-class AGSDesignableMapView: AGSMapView {
-    var image:UIImage?
+@IBDesignable class AGSDesignableMapView: AGSMapView {
+    var ibDesignerImage:UIImage?
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        if let i = image {
+        
+        // Only do anything if ibDesignerImage is set, which it only will be if 
+        // prepareForInterfaceBuilder has been called. So, do nothing at runtime.
+        if let i = ibDesignerImage {
             var backdropLayer = CALayer()
             backdropLayer.frame = layer.bounds
             backdropLayer.contentsGravity = kCAGravityResizeAspectFill
             layer.addSublayer(backdropLayer)
-            
             backdropLayer.contents = i.CGImage
         }
     }
@@ -29,12 +28,13 @@ class AGSDesignableMapView: AGSMapView {
     override func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
         
+        // Thanks to WWDC Session 411 - What's New in Interface Builder for this resource path trick
         let projectPaths = NSProcessInfo.processInfo().environment["IB_PROJECT_SOURCE_DIRECTORIES"].componentsSeparatedByString(",")
         if projectPaths.count > 0 {
             if let projectPath = projectPaths[0] as? String {
                 let imagePath = projectPath.stringByAppendingPathComponent("TestImages/topo.png")
                 println(imagePath)
-                image = UIImage(contentsOfFile: imagePath)
+                ibDesignerImage = UIImage(contentsOfFile: imagePath)
             }
         }
     }

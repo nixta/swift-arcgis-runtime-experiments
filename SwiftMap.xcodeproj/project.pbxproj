@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D90613461958C5FA00EF5796 /* AGSGeometryView_IBDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95F383A1957570E00666FA7 /* AGSGeometryView_IBDesignable.swift */; };
+		D906134A1959F77500EF5796 /* AGSGeomUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90613491959F77500EF5796 /* AGSGeomUtils.swift */; };
 		D950304E1956023400BFC52C /* AGSGeomUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = D950304D1956023400BFC52C /* AGSGeomUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D95030541956023400BFC52C /* AGSGeomUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95030491956023400BFC52C /* AGSGeomUtils.framework */; };
 		D950305B1956023500BFC52C /* AGSGeomUtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D950305A1956023500BFC52C /* AGSGeomUtilsTests.swift */; };
@@ -14,11 +16,10 @@
 		D950305F1956023500BFC52C /* AGSGeomUtils.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D95030491956023400BFC52C /* AGSGeomUtils.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		D950308D1956029100BFC52C /* AGSGeometryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D973874C1954A11C007F700A /* AGSGeometryView.swift */; };
 		D950308E1956029100BFC52C /* AGSOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = D973874D1954A11C007F700A /* AGSOperators.swift */; };
-		D950308F1956029100BFC52C /* AGSPoint+debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = D973874E1954A11C007F700A /* AGSPoint+debug.swift */; };
-		D95030901956029100BFC52C /* AGSPolyline+debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = D973874F1954A11C007F700A /* AGSPolyline+debug.swift */; };
-		D95030911956029100BFC52C /* AGSPolygon+debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97387501954A11C007F700A /* AGSPolygon+debug.swift */; };
+		D95030901956029100BFC52C /* AGSPolyline+bezier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D973874F1954A11C007F700A /* AGSPolyline+bezier.swift */; };
+		D95030911956029100BFC52C /* AGSPolygon+bezier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97387501954A11C007F700A /* AGSPolygon+bezier.swift */; };
 		D9503096195619FD00BFC52C /* ArcGIS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9503094195619C100BFC52C /* ArcGIS.framework */; };
-		D95F383B1957570E00666FA7 /* AGSGeometryView_IBGeometries.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95F383A1957570E00666FA7 /* AGSGeometryView_IBGeometries.swift */; };
+		D9586C12195DD44500041830 /* AGSOperators+Experimental.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9586C11195DD44500041830 /* AGSOperators+Experimental.swift */; };
 		D973873019548C2D007F700A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D973872F19548C2D007F700A /* AppDelegate.swift */; };
 		D973873219548C2D007F700A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D973873119548C2D007F700A /* ViewController.swift */; };
 		D973873519548C2D007F700A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D973873319548C2D007F700A /* Main.storyboard */; };
@@ -29,6 +30,41 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		D90613401958C5ED00EF5796 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D973872219548C2D007F700A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D95030481956023400BFC52C;
+			remoteInfo = AGSGeomUtils;
+		};
+		D90613421958C5ED00EF5796 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D973872219548C2D007F700A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D95030481956023400BFC52C;
+			remoteInfo = AGSGeomUtils;
+		};
+		D90613441958C5F200EF5796 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D973872219548C2D007F700A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D95030481956023400BFC52C;
+			remoteInfo = AGSGeomUtils;
+		};
+		D906134B195A31C800EF5796 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D973872219548C2D007F700A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D95030481956023400BFC52C;
+			remoteInfo = AGSGeomUtils;
+		};
+		D906134D195A31C800EF5796 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D973872219548C2D007F700A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D95030481956023400BFC52C;
+			remoteInfo = AGSGeomUtils;
+		};
 		D95030551956023400BFC52C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D973872219548C2D007F700A /* Project object */;
@@ -95,6 +131,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D90613491959F77500EF5796 /* AGSGeomUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AGSGeomUtils.swift; sourceTree = SOURCE_ROOT; };
 		D95030491956023400BFC52C /* AGSGeomUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AGSGeomUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D950304C1956023400BFC52C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D950304D1956023400BFC52C /* AGSGeomUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AGSGeomUtils.h; sourceTree = "<group>"; };
@@ -102,7 +139,8 @@
 		D95030591956023500BFC52C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D950305A1956023500BFC52C /* AGSGeomUtilsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AGSGeomUtilsTests.swift; path = AGSGeomUtilsTests/AGSGeomUtilsTests.swift; sourceTree = SOURCE_ROOT; };
 		D9503094195619C100BFC52C /* ArcGIS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ArcGIS.framework; path = ../../../../../Library/SDKs/ArcGIS/iOS/ArcGIS.framework; sourceTree = "<group>"; };
-		D95F383A1957570E00666FA7 /* AGSGeometryView_IBGeometries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AGSGeometryView_IBGeometries.swift; sourceTree = SOURCE_ROOT; };
+		D9586C11195DD44500041830 /* AGSOperators+Experimental.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AGSOperators+Experimental.swift"; sourceTree = SOURCE_ROOT; };
+		D95F383A1957570E00666FA7 /* AGSGeometryView_IBDesignable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AGSGeometryView_IBDesignable.swift; sourceTree = SOURCE_ROOT; };
 		D973872A19548C2D007F700A /* SwiftMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D973872E19548C2D007F700A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D973872F19548C2D007F700A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -112,11 +150,10 @@
 		D973873C19548C2D007F700A /* SwiftMapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftMapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D973874119548C2D007F700A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D973874219548C2D007F700A /* SwiftMapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftMapTests.swift; sourceTree = "<group>"; };
-		D973874C1954A11C007F700A /* AGSGeometryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AGSGeometryView.swift; path = ../SwiftMap/AGSGeometryView.swift; sourceTree = "<group>"; };
-		D973874D1954A11C007F700A /* AGSOperators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AGSOperators.swift; path = ../SwiftMap/AGSOperators.swift; sourceTree = "<group>"; };
-		D973874E1954A11C007F700A /* AGSPoint+debug.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "AGSPoint+debug.swift"; path = "../SwiftMap/AGSPoint+debug.swift"; sourceTree = "<group>"; };
-		D973874F1954A11C007F700A /* AGSPolyline+debug.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "AGSPolyline+debug.swift"; path = "../SwiftMap/AGSPolyline+debug.swift"; sourceTree = "<group>"; };
-		D97387501954A11C007F700A /* AGSPolygon+debug.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "AGSPolygon+debug.swift"; path = "../SwiftMap/AGSPolygon+debug.swift"; sourceTree = "<group>"; };
+		D973874C1954A11C007F700A /* AGSGeometryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AGSGeometryView.swift; sourceTree = "<group>"; };
+		D973874D1954A11C007F700A /* AGSOperators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AGSOperators.swift; sourceTree = "<group>"; };
+		D973874F1954A11C007F700A /* AGSPolyline+bezier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AGSPolyline+bezier.swift"; sourceTree = "<group>"; };
+		D97387501954A11C007F700A /* AGSPolygon+bezier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AGSPolygon+bezier.swift"; sourceTree = "<group>"; };
 		D9C9B3DD195636CF00B6649E /* AGSDesignableMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AGSDesignableMapView.swift; sourceTree = "<group>"; };
 		D9CFE02C19562F4500AF2893 /* topo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -160,12 +197,12 @@
 			isa = PBXGroup;
 			children = (
 				D950304D1956023400BFC52C /* AGSGeomUtils.h */,
-				D973874C1954A11C007F700A /* AGSGeometryView.swift */,
-				D9C9B3DD195636CF00B6649E /* AGSDesignableMapView.swift */,
+				D90613491959F77500EF5796 /* AGSGeomUtils.swift */,
 				D973874D1954A11C007F700A /* AGSOperators.swift */,
-				D973874E1954A11C007F700A /* AGSPoint+debug.swift */,
-				D973874F1954A11C007F700A /* AGSPolyline+debug.swift */,
-				D97387501954A11C007F700A /* AGSPolygon+debug.swift */,
+				D9586C13195DD4B100041830 /* User Interface */,
+				D973874F1954A11C007F700A /* AGSPolyline+bezier.swift */,
+				D97387501954A11C007F700A /* AGSPolygon+bezier.swift */,
+				D9586C11195DD44500041830 /* AGSOperators+Experimental.swift */,
 				D950304B1956023400BFC52C /* Supporting Files */,
 			);
 			path = AGSGeomUtils;
@@ -174,7 +211,7 @@
 		D950304B1956023400BFC52C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				D95F383A1957570E00666FA7 /* AGSGeometryView_IBGeometries.swift */,
+				D95F383A1957570E00666FA7 /* AGSGeometryView_IBDesignable.swift */,
 				D9503094195619C100BFC52C /* ArcGIS.framework */,
 				D950304C1956023400BFC52C /* Info.plist */,
 			);
@@ -196,6 +233,15 @@
 				D95030591956023500BFC52C /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D9586C13195DD4B100041830 /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				D973874C1954A11C007F700A /* AGSGeometryView.swift */,
+				D9C9B3DD195636CF00B6649E /* AGSDesignableMapView.swift */,
+			);
+			name = "User Interface";
 			sourceTree = "<group>";
 		};
 		D973872119548C2D007F700A = {
@@ -313,6 +359,11 @@
 				D950306A1956023600BFC52C /* PBXTargetDependency */,
 				D950307C1956024B00BFC52C /* PBXTargetDependency */,
 				D95030931956073300BFC52C /* PBXTargetDependency */,
+				D90613411958C5ED00EF5796 /* PBXTargetDependency */,
+				D90613431958C5ED00EF5796 /* PBXTargetDependency */,
+				D90613451958C5F200EF5796 /* PBXTargetDependency */,
+				D906134C195A31C800EF5796 /* PBXTargetDependency */,
+				D906134E195A31C800EF5796 /* PBXTargetDependency */,
 			);
 			name = AGSGeomUtilsTests;
 			productName = AGSGeomUtilsTests;
@@ -444,11 +495,12 @@
 			files = (
 				D950308D1956029100BFC52C /* AGSGeometryView.swift in Sources */,
 				D9C9B3DE195636CF00B6649E /* AGSDesignableMapView.swift in Sources */,
-				D95F383B1957570E00666FA7 /* AGSGeometryView_IBGeometries.swift in Sources */,
-				D950308F1956029100BFC52C /* AGSPoint+debug.swift in Sources */,
+				D90613461958C5FA00EF5796 /* AGSGeometryView_IBDesignable.swift in Sources */,
 				D950308E1956029100BFC52C /* AGSOperators.swift in Sources */,
-				D95030911956029100BFC52C /* AGSPolygon+debug.swift in Sources */,
-				D95030901956029100BFC52C /* AGSPolyline+debug.swift in Sources */,
+				D906134A1959F77500EF5796 /* AGSGeomUtils.swift in Sources */,
+				D9586C12195DD44500041830 /* AGSOperators+Experimental.swift in Sources */,
+				D95030911956029100BFC52C /* AGSPolygon+bezier.swift in Sources */,
+				D95030901956029100BFC52C /* AGSPolyline+bezier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,6 +532,31 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		D90613411958C5ED00EF5796 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D95030481956023400BFC52C /* AGSGeomUtils */;
+			targetProxy = D90613401958C5ED00EF5796 /* PBXContainerItemProxy */;
+		};
+		D90613431958C5ED00EF5796 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D95030481956023400BFC52C /* AGSGeomUtils */;
+			targetProxy = D90613421958C5ED00EF5796 /* PBXContainerItemProxy */;
+		};
+		D90613451958C5F200EF5796 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D95030481956023400BFC52C /* AGSGeomUtils */;
+			targetProxy = D90613441958C5F200EF5796 /* PBXContainerItemProxy */;
+		};
+		D906134C195A31C800EF5796 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D95030481956023400BFC52C /* AGSGeomUtils */;
+			targetProxy = D906134B195A31C800EF5796 /* PBXContainerItemProxy */;
+		};
+		D906134E195A31C800EF5796 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D95030481956023400BFC52C /* AGSGeomUtils */;
+			targetProxy = D906134D195A31C800EF5796 /* PBXContainerItemProxy */;
+		};
 		D95030561956023400BFC52C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D95030481956023400BFC52C /* AGSGeomUtils */;

@@ -44,18 +44,16 @@ class ViewController: UIViewController, AGSMapViewTouchDelegate, AGSLayerDelegat
         // Dispose of any resources that can be recreated.
     }
     
-    func layerDidLoad(layer: AGSLayer) {
-        println("Layer \(layer.name) loaded")
-    }
-    
     func layer(layer: AGSLayer, didFailToLoadWithError error:NSError) {
         UIAlertView(title: "Unable to load layer", message: "Layer \(layer.name) could not be loaded: \(error.localizedDescription)", delegate: nil, cancelButtonTitle: "OK").show()
         println("Layer \(layer.name) failed to load with error \(error.localizedDescription)")
     }
     
     func mapView(mapView: AGSMapView, didClickAtPoint screen:CGPoint, mapPoint mappoint:AGSPoint, features touchedFeatures:Dictionary<String,AGSFeature[]>) {
-        if let f = touchedFeatures["Zipcodes"]?[0] {
-            geomView.geometry = f.geometry
+        if let selectedZips = touchedFeatures["Zipcodes"]? {
+            if selectedZips.count > 0 {
+                geomView.geometry = selectedZips[0].geometry
+            }
         }
     }
 }

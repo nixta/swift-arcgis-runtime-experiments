@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import ArcGIS
 
 class AGSGeomUtilsTests: XCTestCase {
     
@@ -23,6 +24,13 @@ class AGSGeomUtilsTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         XCTAssert(true, "Pass")
+    }
+    
+    func testProject() {
+        let poly1 = makePolyFromCoords(usaCoords)
+        let sr = AGSSpatialReference.webMercatorSpatialReference()
+        let poly2 = poly1 >>> sr
+        XCTAssert(poly2.spatialReference == sr, "Pass")
     }
     
     func testPerformanceExample() {

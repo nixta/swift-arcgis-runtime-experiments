@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <ArcGIS/ArcGIS.h>
 
 //! Project version number for AGSGeomUtils.
 FOUNDATION_EXPORT double AGSGeomUtilsVersionNumber;
@@ -15,5 +16,3 @@ FOUNDATION_EXPORT double AGSGeomUtilsVersionNumber;
 FOUNDATION_EXPORT const unsigned char AGSGeomUtilsVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <AGSGeomUtils/PublicHeader.h>
-
-

@@ -21,14 +21,16 @@
                                 <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pmR-lN-JN4" customClass="AGSGeometryView" customModule="AGSGeomUtils">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pmR-lN-JN4" customClass="AGSGeometryView" customModule="AGSGeomUtils">
                                 <rect key="frame" x="260" y="260" width="200" height="200"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="b8G-iT-Jgb"/>
+                                    <constraint firstAttribute="width" constant="200" id="piB-Sp-LKj"/>
                                     <constraint firstAttribute="width" secondItem="pmR-lN-JN4" secondAttribute="height" multiplier="1:1" id="wLR-Rv-Ir4"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
-                                        <real key="value" value="4"/>
+                                        <real key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
                                         <color key="value" red="0.17381386861313869" green="0.7331204379562043" blue="0.19665260036496351" alpha="0.33000000000000002" colorSpace="calibratedRGB"/>

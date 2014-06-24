@@ -1,18 +1,19 @@
 //
-//  AGSGeometryView_IBGeometries.swift
+//  AGSGeometryView_IBDesignable.swift
 //  SwiftMap
 //
 //  Created by Nicholas Furness on 6/22/14.
 //  Copyright (c) 2014 Esri. All rights reserved.
 //
 
-import Foundation
-import ArcGIS
-
 func makeIBGeom() -> AGSPolygon {
+    return makePolyFromCoords(nullIslandCoords)
+}
+
+func makePolyFromCoords(coords:Array<Array<Double>>) -> AGSPolygon {
     var ibPolygon = AGSMutablePolygon(spatialReference: AGSSpatialReference.wgs84SpatialReference())
     ibPolygon.addRingToPolygon()
-    for coord in nullIslandCoords {
+    for coord in coords {
         let x = coord[0]
         let y = coord[1]
         let pt = AGSPoint(x: x, y: y, spatialReference: ibPolygon.spatialReference)
