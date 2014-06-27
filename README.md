@@ -21,15 +21,20 @@ you can now write
 let projectedGeom = geom >> mapView.spatialReference
 ```
 
-The following binary (in Swift terms, infix) operators are defined:
+The following Swift infix operators are ovelrloaded. Note that in all cases except `>>` the types of geometry must match:
 
 | Operator | Geometry Operation | Example | Notes |
 | -------- | ------------------ | ------- | ----- |
-| >>       | Project To Spatial Reference | `let pg = g >> mapView.spatialReference` | |
+| >>       | Project To Spatial Reference | `let projected = geom >> mapView.spatialReference` | |
 | +, &#124;, &#124;&#124; | [Union](http://resources.esri.com/help/9.3/arcgisengine/arcobjects/esriGeometry/ITopologicalOperator_Union.htm) | `let unionPoly = polygon1 + polygon2` | |
 | &, &&    | [Intersection](http://resources.esri.com/help/9.3/arcgisengine/arcobjects/esriGeometry/ITopologicalOperator_Intersect.htm) | `let intersection =  polygon1 + polygon2` | |
 | -        | [Difference](http://resources.esri.com/help/9.3/arcgisengine/arcobjects/esriGeometry/ITopologicalOperator_Difference.htm) | `let diff = polygon1 - polygon2 ` | Order is significant|
 | ^         | [Symmetric Difference](http://resources.esri.com/help/9.3/arcgisengine/arcobjects/esriGeometry/ITopologicalOperator_SymmetricDifference.htm) | `let symmetricDiff = polygon1 ^ polygon2 ` | |
+
+__Notes__:
+
+ 1. The Difference operator `-` could technically accept different kinds of geometry, but that's not being considered for now.
+ 2. In the above examples, polygons are shown, but the operators support `AGSPoint`, `AGSMultipoint`, `AGSPolyline` and `AGSPolygon`.
 
 ##User Interface
 ####AGSGeometryView
