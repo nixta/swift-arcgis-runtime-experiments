@@ -1,5 +1,5 @@
 //
-//  AGSMapView+IB.swift
+//  AGSGeometryView.swift
 //  SwiftTestbed
 //
 //  Created by Nicholas Furness on 6/13/14.
