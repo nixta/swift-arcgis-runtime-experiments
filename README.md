@@ -25,11 +25,11 @@ The following binary (in Swift terms, infix) operators are defined:
 
 | Operator | Geometry Operation | Example | Notes |
 | -------- | ------------------ | ------- | ----- |
-| `>>`       | Project To Spatial Reference | `let pg = g >> mapView.spatialReference` | |
-| `+` `|` `||` | [Union](http://resources.esri.com/help/9.3/arcgisengine/arcobjects/esriGeometry/ITopologicalOperator_Union.htm) | `let unionPoly = polygon1 + polygon2` | |
-| `&` `&&`    | [Intersection](http://resources.esri.com/help/9.3/arcgisengine/arcobjects/esriGeometry/ITopologicalOperator_Intersect.htm) | `let intersection =  polygon1 + polygon2` | |
-| `-`        | [Difference](http://resources.esri.com/help/9.3/arcgisengine/arcobjects/esriGeometry/ITopologicalOperator_Difference.htm) | `let diff = polygon1 - polygon2 ` | Order is significant|
-| `^`        | [Symmetric Difference](http://resources.esri.com/help/9.3/arcgisengine/arcobjects/esriGeometry/ITopologicalOperator_SymmetricDifference.htm) | `let symmetricDiff = polygon1 ^ polygon2 ` | |
+| >>       | Project To Spatial Reference | `let pg = g >> mapView.spatialReference` | |
+| +, &#124;, &#124;&#124; | [Union](http://resources.esri.com/help/9.3/arcgisengine/arcobjects/esriGeometry/ITopologicalOperator_Union.htm) | `let unionPoly = polygon1 + polygon2` | |
+| &, &&    | [Intersection](http://resources.esri.com/help/9.3/arcgisengine/arcobjects/esriGeometry/ITopologicalOperator_Intersect.htm) | `let intersection =  polygon1 + polygon2` | |
+| -        | [Difference](http://resources.esri.com/help/9.3/arcgisengine/arcobjects/esriGeometry/ITopologicalOperator_Difference.htm) | `let diff = polygon1 - polygon2 ` | Order is significant|
+| ^         | [Symmetric Difference](http://resources.esri.com/help/9.3/arcgisengine/arcobjects/esriGeometry/ITopologicalOperator_SymmetricDifference.htm) | `let symmetricDiff = polygon1 ^ polygon2 ` | |
 
 ##User Interface
 ####AGSGeometryView
