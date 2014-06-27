@@ -131,7 +131,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		D90613491959F77500EF5796 /* AGSGeomUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AGSGeomUtils.swift; sourceTree = SOURCE_ROOT; };
+		D90613491959F77500EF5796 /* AGSGeomUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AGSGeomUtils.swift; sourceTree = "<group>"; };
 		D95030491956023400BFC52C /* AGSGeomUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AGSGeomUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D950304C1956023400BFC52C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D950304D1956023400BFC52C /* AGSGeomUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AGSGeomUtils.h; sourceTree = "<group>"; };
@@ -139,8 +139,8 @@
 		D95030591956023500BFC52C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D950305A1956023500BFC52C /* AGSGeomUtilsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AGSGeomUtilsTests.swift; path = AGSGeomUtilsTests/AGSGeomUtilsTests.swift; sourceTree = SOURCE_ROOT; };
 		D9503094195619C100BFC52C /* ArcGIS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ArcGIS.framework; path = ../../../../../Library/SDKs/ArcGIS/iOS/ArcGIS.framework; sourceTree = "<group>"; };
-		D9586C11195DD44500041830 /* AGSOperators+Experimental.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AGSOperators+Experimental.swift"; sourceTree = SOURCE_ROOT; };
-		D95F383A1957570E00666FA7 /* AGSGeometryView_IBDesignable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AGSGeometryView_IBDesignable.swift; sourceTree = SOURCE_ROOT; };
+		D9586C11195DD44500041830 /* AGSOperators+Experimental.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AGSOperators+Experimental.swift"; sourceTree = "<group>"; };
+		D95F383A1957570E00666FA7 /* AGSGeometryView_IBDesignable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AGSGeometryView_IBDesignable.swift; sourceTree = "<group>"; };
 		D973872A19548C2D007F700A /* SwiftMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D973872E19548C2D007F700A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D973872F19548C2D007F700A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };

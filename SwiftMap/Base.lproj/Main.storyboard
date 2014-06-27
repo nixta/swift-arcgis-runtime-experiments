@@ -38,6 +38,7 @@
                                     <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
                                         <color key="value" red="0.91106865875912413" green="0.55782390510948909" blue="0.30522924270072993" alpha="0.58999999999999997" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="geometryTouchOnly" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
