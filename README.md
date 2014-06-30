@@ -27,7 +27,7 @@ The following Swift infix operators are ovelrloaded. Note that in all cases exce
 | -------- | ------------------ | ------- | ----- |
 | >>       | Reproject | `let projected = geom >> mapView.spatialReference` | |
 | +, &#124;, &#124;&#124; | [Union](http://resources.esri.com/help/9.3/arcgisengine/arcobjects/esriGeometry/ITopologicalOperator_Union.htm) | `let unionPoly = polygon1 + polygon2` | |
-| &, &&    | [Intersection](http://resources.esri.com/help/9.3/arcgisengine/arcobjects/esriGeometry/ITopologicalOperator_Intersect.htm) | `let intersectPoly =  polygon1 + polygon2` | |
+| &, &&    | [Intersection](http://resources.esri.com/help/9.3/arcgisengine/arcobjects/esriGeometry/ITopologicalOperator_Intersect.htm) | `let intersectPoly =  polygon1 & polygon2` | |
 | -        | [Difference](http://resources.esri.com/help/9.3/arcgisengine/arcobjects/esriGeometry/ITopologicalOperator_Difference.htm) | `let diffPoly = polygon1 - polygon2 ` | Order is significant|
 | ^         | [Symmetric Difference](http://resources.esri.com/help/9.3/arcgisengine/arcobjects/esriGeometry/ITopologicalOperator_SymmetricDifference.htm) | `let symmetricDiffPoly = polygon1 ^ polygon2 ` | |
 
