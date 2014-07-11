@@ -29,10 +29,12 @@ import QuartzCore
         super.prepareForInterfaceBuilder()
         
         // Thanks to WWDC Session 411 - What's New in Interface Builder for this resource path trick
-        let projectPaths = NSProcessInfo.processInfo().environment["IB_PROJECT_SOURCE_DIRECTORIES"].componentsSeparatedByString(",")
-        if projectPaths.count > 0 {
-            if let projectPath = projectPaths[0] as? String {
-                let imagePath = projectPath.stringByAppendingPathComponent("TestImages/topo.png")
+        // Xcode6 Beta 3 broke this in all sorts of ways.
+        let dirsAny: AnyObject? = NSProcessInfo.processInfo().environment["IB_PROJECT_SOURCE_DIRECTORIES"]
+        if let dirsString = dirsAny as? String {
+            let projectPaths =  dirsString.componentsSeparatedByString(",")
+            if projectPaths.count > 0 {
+                let imagePath = projectPaths[0].stringByAppendingPathComponent("TestImages/topo.png")
                 println(imagePath)
                 ibDesignerImage = UIImage(contentsOfFile: imagePath)
             }

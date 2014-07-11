@@ -11,11 +11,11 @@ extension AGSPolyline: HasBezier {
         
         // Translate our AGSPolygon into a UIBezierPath
         var outPath = UIBezierPath()
-        for pathIndex in 0..self.numPaths {
+        for pathIndex in 0..<self.numPaths {
             // Build each ring in turn
             if let firstPtInPath = self.pointOnPath(pathIndex, atIndex: 0)? {
                 outPath.moveToPoint(cgPointFromAgsPoint(firstPtInPath))
-                for ptIndex in 1..self.numPointsInPath(pathIndex) {
+                for ptIndex in 1..<self.numPointsInPath(pathIndex) {
                     if let pt = self.pointOnPath(pathIndex, atIndex: ptIndex)? {
                         var ptToAdd = cgPointFromAgsPoint(pt)
                         outPath.addLineToPoint(ptToAdd)

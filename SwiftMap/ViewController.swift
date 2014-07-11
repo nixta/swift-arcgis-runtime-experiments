@@ -49,7 +49,7 @@ class ViewController: UIViewController, AGSMapViewTouchDelegate, AGSLayerDelegat
         println("Layer \(layer.name) failed to load with error \(error.localizedDescription)")
     }
     
-    func mapView(mapView: AGSMapView, didClickAtPoint screen:CGPoint, mapPoint mappoint:AGSPoint, features touchedFeatures:Dictionary<String,AGSFeature[]>) {
+    func mapView(mapView: AGSMapView, didClickAtPoint screen:CGPoint, mapPoint mappoint:AGSPoint, features touchedFeatures:Dictionary<String,[AGSFeature]>) {
         if let selectedZips = touchedFeatures["Zipcodes"]? {
             if selectedZips.count > 0 {
                 geomView.geometry = selectedZips[0].geometry
