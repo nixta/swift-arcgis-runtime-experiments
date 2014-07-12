@@ -39,6 +39,16 @@ operator infix >> {}
 }
 
 
+/// Arithmetic Assignment Operators (+=, -=)
+@assignment func += <T: AGSGeometry, U: AGSGeometry where T: Geometry, U: Geometry, T.Dimension == U.Dimension>(inout lhs: T, rhs: U) {
+    lhs = lhs + rhs
+}
+
+@assignment func -= <T: AGSGeometry, U: AGSGeometry where T: Geometry, U: Geometry, T.Dimension == U.Dimension>(inout lhs: T, rhs: U) {
+    lhs = lhs - rhs
+}
+
+
 /// "Logical" Geometry Operators (||, &&)
 @infix func || <T: AGSGeometry, U: AGSGeometry where T: Geometry, U: Geometry, T.Dimension == U.Dimension>(lhs: T, rhs: U) -> T {
     return lhs | rhs
@@ -51,8 +61,9 @@ operator infix >> {}
 
 
 
+
 /// Geometry Operator protocols - necessary to limit generics
-protocol Geometry {
+@objc protocol Geometry {
     typealias Dimension
 }
 

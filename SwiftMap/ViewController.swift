@@ -20,6 +20,8 @@ class ViewController: UIViewController, AGSMapViewTouchDelegate, AGSLayerDelegat
     
     @IBOutlet var geomView: AGSGeometryView
     
+    var selectedGeometries: [AGSGeometry] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -52,7 +54,20 @@ class ViewController: UIViewController, AGSMapViewTouchDelegate, AGSLayerDelegat
     func mapView(mapView: AGSMapView, didClickAtPoint screen:CGPoint, mapPoint mappoint:AGSPoint, features touchedFeatures:Dictionary<String,[AGSFeature]>) {
         if let selectedZips = touchedFeatures["Zipcodes"]? {
             if selectedZips.count > 0 {
-                geomView.geometry = selectedZips[0].geometry
+                if let polygon = selectedZips[0].geometry as? AGSPolygon {
+                    selectedGeometries += polygon
+                    if var totalPolygon = selectedGeometries[0] as? AGSPolygon {
+                        for index in 1 ..< selectedGeometries.count {
+                            if let p = selectedGeometries[index] as? AGSPolygon {
+                                totalPolygon += p
+                            }
+                        }
+                        geomView.geometry = totalPolygon
+                        return
+                    }
+                }
+                geomView.geometry = nil
+                return
             }
         }
     }

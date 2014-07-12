@@ -14,25 +14,29 @@ import QuartzCore
     @IBInspectable var fillColor: UIColor = UIColor.grayColor() { didSet { updatePath() } }
     @IBInspectable var geometryTouchOnly: Bool = false
     
-    var geometry: AGSGeometry? { didSet { updatePath() } }
+    var geometry: AGSGeometry? {
+    didSet {
+        updatePath()
+    }
+    }
 
     var geometryLayer: CAShapeLayer!
-    var path: UIBezierPath?
+    var path: UIBezierPath? {
+    didSet {
+        if let p = path {
+            geometryLayer.path = p.CGPath
+        } else {
+            geometryLayer.path = nil
+        }
+    }
+    }
     
     func updatePath() {
-        if let gl = geometryLayer? {
-            if let g = geometry? {
-                let targetBounds = CGRectInset(geometryLayer.bounds, geometryLayer.lineWidth/2, geometryLayer.lineWidth/2)
-                
-                var p:UIBezierPath?
-                
-                if let bezierGeom = g as? HasBezier {
-                    path = bezierGeom.bezierForFrame(targetBounds)
-                    geometryLayer.path = path!.CGPath
-                } else {
-                    path = nil
-                    geometryLayer.path = nil
-                }
+        if geometryLayer {
+            if let bezierProvider = geometry as? HasBezier {
+                path = UIBezierPath(geometry: bezierProvider, frame: CGRectInset(geometryLayer.bounds, geometryLayer.lineWidth/2, geometryLayer.lineWidth/2))
+            } else {
+                path = nil
             }
         }
     }
