@@ -13,6 +13,7 @@ import AGSGeomUtils
 var tileUrl = "http://services.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer"
 var statesUrl = "http://services.arcgis.com/P3ePLMYs2RVChkJx/ArcGIS/rest/services/USA_States_Generalized/FeatureServer/0"
 var nycZipsUrl = "http://services.arcgis.com/OfH668nDRN7tbJh0/arcgis/rest/services/NYC_ZipCodes/FeatureServer/0"
+var zipCodeLayerName = "Zipcodes"
 
 class ViewController: UIViewController, AGSMapViewTouchDelegate, AGSLayerDelegate {
                             
@@ -23,6 +24,7 @@ class ViewController: UIViewController, AGSMapViewTouchDelegate, AGSLayerDelegat
     var selectedGeometries: [AGSGeometry] = []
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
@@ -31,7 +33,7 @@ class ViewController: UIViewController, AGSMapViewTouchDelegate, AGSLayerDelegat
         basemap.delegate = self
         
         var zipcodes = AGSFeatureLayer(URL: NSURL(string: nycZipsUrl), mode: AGSFeatureLayerModeOnDemand)
-        mapView.addMapLayer(zipcodes, withName: "Zipcodes")
+        mapView.addMapLayer(zipcodes, withName: zipCodeLayerName)
         zipcodes.delegate = self
         
         mapView.touchDelegate = self
@@ -52,23 +54,37 @@ class ViewController: UIViewController, AGSMapViewTouchDelegate, AGSLayerDelegat
     }
     
     func mapView(mapView: AGSMapView, didClickAtPoint screen:CGPoint, mapPoint mappoint:AGSPoint, features touchedFeatures:Dictionary<String,[AGSFeature]>) {
-        if let selectedZips = touchedFeatures["Zipcodes"]? {
-            if selectedZips.count > 0 {
-                if let polygon = selectedZips[0].geometry as? AGSPolygon {
-                    selectedGeometries += polygon
-                    if var totalPolygon = selectedGeometries[0] as? AGSPolygon {
-                        for index in 1 ..< selectedGeometries.count {
-                            if let p = selectedGeometries[index] as? AGSPolygon {
-                                totalPolygon += p
-                            }
+        if touchedFeatures[zipCodeLayerName]?.count > 0 {
+            self.addOrRemoveFeature(touchedFeatures[zipCodeLayerName]![0])
+        }
+    }
+    
+    func addOrRemoveFeature(feature:AGSFeature) {
+        if let polygon = feature.geometry? as? AGSPolygon {
+            if let index = find(selectedGeometries, polygon) {
+                selectedGeometries -= polygon
+            } else {
+                selectedGeometries += polygon
+            }
+            
+            if selectedGeometries.count > 0 {
+                if var totalPolygon = selectedGeometries[0] as? AGSPolygon {
+                    for index in 1 ..< selectedGeometries.count {
+                        if let p = selectedGeometries[index] as? AGSPolygon {
+                            totalPolygon += p
                         }
-                        geomView.geometry = totalPolygon
-                        return
                     }
+                    geomView.geometry = totalPolygon
                 }
+            } else {
                 geomView.geometry = nil
-                return
             }
         }
+    }
+}
+
+@assignment func -= <C:ArrayType, U where U:Equatable, C.GeneratorType.Element == U> (inout lhs: C, rhs: U) {
+    if let index = find(lhs as Array, rhs) {
+        lhs.removeAtIndex(index)
     }
 }

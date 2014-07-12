@@ -22,38 +22,23 @@ extension UIBezierPath {
     }
     
     var isEmpty: Bool {
-    get {
-        return self.currentPoint == CGPointZero
+        get {
+            return self.currentPoint == CGPointZero
+        }
     }
-    }
-}
-
-
-
-func transformGeographicBezierToFrame(bezier:UIBezierPath, frame:CGRect) {
-    // Scale and shift the geometry to the target frame
-    let objectCenterTransform = CGAffineTransformMakeTranslation(-bezier.bounds.midX, -bezier.bounds.midY)
-
-    let scaleFactor = min(frame.height/bezier.bounds.height, frame.width/bezier.bounds.width)
-    let scaleTransform = CGAffineTransformMakeScale(scaleFactor, -scaleFactor)
-    
-    let frameCenterTransform = CGAffineTransformMakeTranslation(frame.origin.x + frame.width/2, frame.origin.y + frame.height/2)
-    
-    bezier.applyTransform(objectCenterTransform)
-    bezier.applyTransform(scaleTransform)
-    bezier.applyTransform(frameCenterTransform)
 }
 
 
 
 extension AGSPoint {
     var cgPoint:CGPoint {
-    get {
-        return CGPointMake(CGFloat(self.x), CGFloat(self.y))
-    }
+        get {
+            return CGPointMake(CGFloat(self.x), CGFloat(self.y))
+        }
     }
 
 }
+
 
 
 /// Implement the HazBezier protocol on AGSPolyline
@@ -108,4 +93,21 @@ extension AGSPolygon: HasBezier {
         
         return bezier
     }
+}
+
+
+
+/// Common helper function for UIBezierPath to Frame transformation
+func transformGeographicBezierToFrame(bezier:UIBezierPath, frame:CGRect) {
+    // Scale and shift the geometry to the target frame
+    let objectCenterTransform = CGAffineTransformMakeTranslation(-bezier.bounds.midX, -bezier.bounds.midY)
+    
+    let scaleFactor = min(frame.height/bezier.bounds.height, frame.width/bezier.bounds.width)
+    let scaleTransform = CGAffineTransformMakeScale(scaleFactor, -scaleFactor)
+    
+    let frameCenterTransform = CGAffineTransformMakeTranslation(frame.origin.x + frame.width/2, frame.origin.y + frame.height/2)
+    
+    bezier.applyTransform(objectCenterTransform)
+    bezier.applyTransform(scaleTransform)
+    bezier.applyTransform(frameCenterTransform)
 }
