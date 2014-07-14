@@ -44,15 +44,7 @@ class ViewController: UIViewController, AGSMapViewTouchDelegate, AGSLayerDelegat
         mapView.zoomToScale(600000, withCenterPoint: centerPt, animated: true)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    func layer(layer: AGSLayer, didFailToLoadWithError error:NSError) {
-        UIAlertView(title: "Unable to load layer", message: "Layer \(layer.name) could not be loaded: \(error.localizedDescription)", delegate: nil, cancelButtonTitle: "OK").show()
-        println("Layer \(layer.name) failed to load with error \(error.localizedDescription)")
-    }
+
     
     func mapView(mapView: AGSMapView, didClickAtPoint screen:CGPoint, mapPoint mappoint:AGSPoint, features touchedFeatures:Dictionary<String,[AGSFeature]>) {
         if touchedFeatures[zipCodeLayerName]?.count > 0 {
@@ -94,6 +86,18 @@ class ViewController: UIViewController, AGSMapViewTouchDelegate, AGSLayerDelegat
 
             geomView.geometry = displayPolygon
         }
+    }
+    
+    
+    func layer(layer: AGSLayer, didFailToLoadWithError error:NSError) {
+        UIAlertView(title: "Unable to load layer", message: "Layer \(layer.name) could not be loaded: \(error.localizedDescription)", delegate: nil, cancelButtonTitle: "OK").show()
+        println("Layer \(layer.name) failed to load with error \(error.localizedDescription)")
+    }
+    
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
 }
 
