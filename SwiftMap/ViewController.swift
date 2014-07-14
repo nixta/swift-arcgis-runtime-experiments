@@ -17,11 +17,12 @@ var zipCodeLayerName = "Zipcodes"
 
 class ViewController: UIViewController, AGSMapViewTouchDelegate, AGSLayerDelegate {
                             
-    @IBOutlet var mapView: AGSMapView
+    @IBOutlet var mapView:AGSMapView
     
-    @IBOutlet var geomView: AGSGeometryView
+    @IBOutlet var geomView:AGSGeometryView
     
-    var selectedGeometries: [AGSGeometry] = []
+    var selectedGeometries:[AGSGeometry] = []
+    var displayPolygon:AGSPolygon?
     
     override func viewDidLoad() {
         
@@ -40,7 +41,7 @@ class ViewController: UIViewController, AGSMapViewTouchDelegate, AGSLayerDelegat
         
         let centerPt = AGSPoint(x: -8233300, y: 4950000, spatialReference: AGSSpatialReference.webMercatorSpatialReference())
         
-        mapView.zoomToScale(981000, withCenterPoint: centerPt, animated: true)
+        mapView.zoomToScale(600000, withCenterPoint: centerPt, animated: true)
     }
 
     override func didReceiveMemoryWarning() {
@@ -61,24 +62,37 @@ class ViewController: UIViewController, AGSMapViewTouchDelegate, AGSLayerDelegat
     
     func addOrRemoveFeature(feature:AGSFeature) {
         if let polygon = feature.geometry? as? AGSPolygon {
-            if let index = find(selectedGeometries, polygon) {
-                selectedGeometries -= polygon
-            } else {
+
+            if selectedGeometries.count == 0 {
+                displayPolygon = polygon
                 selectedGeometries += polygon
-            }
-            
-            if selectedGeometries.count > 0 {
-                if var totalPolygon = selectedGeometries[0] as? AGSPolygon {
-                    for index in 1 ..< selectedGeometries.count {
-                        if let p = selectedGeometries[index] as? AGSPolygon {
-                            totalPolygon += p
-                        }
-                    }
-                    geomView.geometry = totalPolygon
-                }
             } else {
-                geomView.geometry = nil
+                // Track selected polygons
+                var addingPolygon = find(selectedGeometries, polygon) == nil
+                if addingPolygon  {
+                    selectedGeometries += polygon // Using custom -= operator on Array
+                } else {
+                    selectedGeometries -= polygon
+                }
+                
+                // Update visible geometry with the current change
+                if var workingPolygon = displayPolygon? {
+                    
+                    if addingPolygon {
+                        workingPolygon += polygon
+                    } else {
+                        workingPolygon -= polygon
+                    }
+
+                    if workingPolygon.isEmpty() {
+                        displayPolygon = nil
+                    } else {
+                        displayPolygon = workingPolygon
+                    }
+                }
             }
+
+            geomView.geometry = displayPolygon
         }
     }
 }
