@@ -7,63 +7,60 @@
 //
 
 
-/// Project to Spatial Reference
-operator infix >> {}
-
-@infix func >> <T: AGSGeometry>(lhs: T, rhs: AGSSpatialReference) -> T {
-    return AGSGeometryEngine().projectGeometry(lhs, toSpatialReference: rhs) as T
-}
-
-
 /// "Bitwise" Geometry Operators (|, &, ^)
-@infix func | <T: AGSGeometry, U: AGSGeometry where T: Geometry, U: Geometry, T.Dimension == U.Dimension>(lhs: T, rhs: U) -> T {
+@infix public func | <T: AGSGeometry, U: AGSGeometry where T: Geometry, U: Geometry, T.Dimension == U.Dimension>(lhs: T, rhs: U) -> T {
     return AGSGeometryEngine().unionGeometries([lhs, rhs]) as T
 }
 
-@infix func & <T: AGSGeometry, U: AGSGeometry where T: Geometry, U: Geometry, T.Dimension == U.Dimension>(lhs: T, rhs: U) -> T {
+@infix public func & <T: AGSGeometry, U: AGSGeometry where T: Geometry, U: Geometry, T.Dimension == U.Dimension>(lhs: T, rhs: U) -> T {
     return AGSGeometryEngine().intersectionOfGeometry(lhs, andGeometry: rhs) as T
 }
 
-@infix func ^ <T: AGSGeometry, U: AGSGeometry where T: Geometry, U: Geometry, T.Dimension == U.Dimension>(lhs: T, rhs: U) -> T {
+@infix public func ^ <T: AGSGeometry, U: AGSGeometry where T: Geometry, U: Geometry, T.Dimension == U.Dimension>(lhs: T, rhs: U) -> T {
     return AGSGeometryEngine().symmetricDifferenceOfGeometry(lhs, andGeometry: rhs) as T
 }
 
 
 /// "Arithmetic" Geometry Operators (-, +)
-@infix func - <T: AGSGeometry, U: AGSGeometry where T: Geometry, U: Geometry, T.Dimension == U.Dimension>(lhs: T, rhs: U) -> T {
+@infix public func - <T: AGSGeometry, U: AGSGeometry where T: Geometry, U: Geometry, T.Dimension == U.Dimension>(lhs: T, rhs: U) -> T {
     return AGSGeometryEngine().differenceOfGeometry(lhs, andGeometry: rhs) as T
 }
 
-@infix func + <T: AGSGeometry, U: AGSGeometry where T: Geometry, U: Geometry, T.Dimension == U.Dimension>(lhs: T, rhs: U) -> T {
+@infix public func + <T: AGSGeometry, U: AGSGeometry where T: Geometry, U: Geometry, T.Dimension == U.Dimension>(lhs: T, rhs: U) -> T {
     return lhs | rhs
 }
+
+/// Project to Spatial Reference
+public operator infix >> {}
+
+@infix public func >> <T: AGSGeometry>(lhs: T, rhs: AGSSpatialReference) -> T {
+    return AGSGeometryEngine().projectGeometry(lhs, toSpatialReference: rhs) as T
+}
+
 
 
 /// "Logical" Geometry Operators (||, &&)
-@infix func || <T: AGSGeometry, U: AGSGeometry where T: Geometry, U: Geometry, T.Dimension == U.Dimension>(lhs: T, rhs: U) -> T {
+@infix public func || <T: AGSGeometry, U: AGSGeometry where T: Geometry, U: Geometry, T.Dimension == U.Dimension>(lhs: T, rhs: U) -> T {
     return lhs | rhs
 }
 
-@infix func && <T: AGSGeometry, U: AGSGeometry where T: Geometry, U: Geometry, T.Dimension == U.Dimension>(lhs: T, rhs: U) -> T {
+@infix public func && <T: AGSGeometry, U: AGSGeometry where T: Geometry, U: Geometry, T.Dimension == U.Dimension>(lhs: T, rhs: U) -> T {
     return lhs & rhs
 }
 
 
 /// Assignment Operators (+=, -=)
-@assignment func += <T: AGSGeometry, U: AGSGeometry where T: Geometry, U: Geometry, T.Dimension == U.Dimension>(inout lhs: T, rhs: U) {
+@assignment public func += <T: AGSGeometry, U: AGSGeometry where T: Geometry, U: Geometry, T.Dimension == U.Dimension>(inout lhs: T, rhs: U) {
     lhs = lhs + rhs
 }
 
-@assignment func -= <T: AGSGeometry, U: AGSGeometry where T: Geometry, U: Geometry, T.Dimension == U.Dimension>(inout lhs: T, rhs: U) {
+@assignment public func -= <T: AGSGeometry, U: AGSGeometry where T: Geometry, U: Geometry, T.Dimension == U.Dimension>(inout lhs: T, rhs: U) {
     lhs = lhs - rhs
 }
 
 
-
-
-
 /// Geometry Operator protocols - necessary to limit generics
-@objc protocol Geometry {
+@objc public protocol Geometry {
     typealias Dimension
 }
 

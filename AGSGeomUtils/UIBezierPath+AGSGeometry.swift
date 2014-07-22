@@ -75,6 +75,10 @@ extension AGSPolygon: HasBezier {
     }
     
     func appendToBezier(bezier:UIBezierPath, forFrame frame:CGRect) -> UIBezierPath {
+        if self.isEmpty() {
+            return bezier
+        }
+        
         // Translate our AGSPolygon into a UIBezierPath
         for ringIndex in 0 ..< self.numRings {
             // Build each ring in turn

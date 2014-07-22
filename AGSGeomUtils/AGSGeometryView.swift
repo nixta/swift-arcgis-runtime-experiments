@@ -8,19 +8,20 @@
 
 import QuartzCore
 
-@IBDesignable class AGSGeometryView : UIView {
-    @IBInspectable var lineWidth: CGFloat = 10.0 { didSet { updatePath() } }
-    @IBInspectable var lineColor: UIColor = UIColor.blackColor() { didSet { updatePath() } }
-    @IBInspectable var fillColor: UIColor = UIColor.grayColor() { didSet { updatePath() } }
-    @IBInspectable var geometryTouchOnly: Bool = false
+@IBDesignable public class AGSGeometryView : UIView {
+    @IBInspectable public var lineWidth: CGFloat = 10.0 { didSet { updatePath() } }
+    @IBInspectable public var lineColor: UIColor = UIColor.blackColor() { didSet { updatePath() } }
+    @IBInspectable public var fillColor: UIColor = UIColor.grayColor() { didSet { updatePath() } }
+    @IBInspectable public var geometryTouchOnly: Bool = false
     
-    var geometry: AGSGeometry? {
+    public var geometry: AGSGeometry? {
     didSet {
         updatePath()
     }
     }
 
     var geometryLayer: CAShapeLayer!
+    
     var path: UIBezierPath? {
     didSet {
         if let p = path {
@@ -32,22 +33,27 @@ import QuartzCore
     }
     
     func updatePath() {
-        if geometryLayer {
+        if geometryLayer { // Need this because NIB hydration will set values on initialized object
             if let bezierProvider = geometry as? HasBezier {
-                path = UIBezierPath(geometry: bezierProvider, frame: CGRectInset(geometryLayer.bounds, geometryLayer.lineWidth/2, geometryLayer.lineWidth/2))
+                let inset = geometryLayer.lineWidth/2
+                path = UIBezierPath(geometry: bezierProvider, frame: CGRectInset(geometryLayer.bounds, inset, inset))
             } else {
                 path = nil
             }
         }
     }
     
-    override func layoutSubviews() {
+    override public func layoutSubviews() {
         super.layoutSubviews()
-        
-        // Initialize the CAShapeLayer for the geometry representation
+
+        // Create a CAShapeLayer - needs to be here for IBDesignable to work
         if !geometryLayer {
             geometryLayer = CAShapeLayer()
             layer.addSublayer(geometryLayer)
+        }
+        
+        // Initialize the CAShapeLayer for the geometry representation
+        if let geometryLayer = geometryLayer {
             geometryLayer.frame = layer.bounds
             geometryLayer.lineJoin = kCALineJoinRound
             geometryLayer.lineWidth = abs(lineWidth)
@@ -59,7 +65,7 @@ import QuartzCore
         updatePath()
     }
     
-    override func pointInside(point: CGPoint, withEvent event: UIEvent!) -> Bool {
+    override public func pointInside(point: CGPoint, withEvent event: UIEvent!) -> Bool {
         if geometryTouchOnly {
             // Only handle clicks within the geometry's outline
             if let p = path? {
@@ -70,7 +76,7 @@ import QuartzCore
         return true
     }
     
-    override func prepareForInterfaceBuilder()  {
+    override public func prepareForInterfaceBuilder()  {
         if !geometry {
             geometry = makeIBGeom()
         }

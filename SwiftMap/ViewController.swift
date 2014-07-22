@@ -17,9 +17,9 @@ var zipCodeLayerName = "Zipcodes"
 
 class ViewController: UIViewController, AGSMapViewTouchDelegate, AGSLayerDelegate {
                             
-    @IBOutlet var mapView:AGSMapView
+    @IBOutlet var mapView:AGSMapView!
     
-    @IBOutlet var geomView:AGSGeometryView
+    @IBOutlet var geomView:AGSGeometryView!
     
     var selectedGeometries:[AGSGeometry] = []
     var displayPolygon:AGSPolygon?
@@ -54,7 +54,7 @@ class ViewController: UIViewController, AGSMapViewTouchDelegate, AGSLayerDelegat
     
     func addOrRemoveFeature(feature:AGSFeature) {
         if let polygon = feature.geometry? as? AGSPolygon {
-
+            
             if selectedGeometries.count == 0 {
                 displayPolygon = polygon
                 selectedGeometries += polygon
@@ -62,9 +62,9 @@ class ViewController: UIViewController, AGSMapViewTouchDelegate, AGSLayerDelegat
                 // Track selected polygons
                 var addingPolygon = find(selectedGeometries, polygon) == nil
                 if addingPolygon  {
-                    selectedGeometries += polygon // Using custom -= operator on Array
+                    selectedGeometries += polygon
                 } else {
-                    selectedGeometries -= polygon
+                    selectedGeometries -= polygon // Using custom -= operator on Array
                 }
                 
                 // Update visible geometry with the current change
@@ -76,11 +76,7 @@ class ViewController: UIViewController, AGSMapViewTouchDelegate, AGSLayerDelegat
                         workingPolygon -= polygon
                     }
 
-                    if workingPolygon.isEmpty() {
-                        displayPolygon = nil
-                    } else {
-                        displayPolygon = workingPolygon
-                    }
+                    displayPolygon = workingPolygon
                 }
             }
 
@@ -101,8 +97,8 @@ class ViewController: UIViewController, AGSMapViewTouchDelegate, AGSLayerDelegat
     }
 }
 
-@assignment func -= <C:ArrayType, U where U:Equatable, C.GeneratorType.Element == U> (inout lhs: C, rhs: U) {
-    if let index = find(lhs as Array, rhs) {
+@assignment func -=<T:Equatable>(inout lhs: [T], rhs: T) {
+    if let index = find(lhs, rhs) {
         lhs.removeAtIndex(index)
     }
 }
