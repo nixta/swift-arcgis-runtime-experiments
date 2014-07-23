@@ -15,21 +15,21 @@ import QuartzCore
     @IBInspectable public var geometryTouchOnly: Bool = false
     
     public var geometry: AGSGeometry? {
-    didSet {
-        updatePath()
-    }
+        didSet {
+            updatePath()
+        }
     }
 
     var geometryLayer: CAShapeLayer!
     
     var path: UIBezierPath? {
-    didSet {
-        if let p = path {
-            geometryLayer.path = p.CGPath
-        } else {
-            geometryLayer.path = nil
+        didSet {
+            if let p = path {
+                geometryLayer.path = p.CGPath
+            } else {
+                geometryLayer.path = nil
+            }
         }
-    }
     }
     
     func updatePath() {

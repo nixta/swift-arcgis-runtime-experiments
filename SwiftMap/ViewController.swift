@@ -17,9 +17,8 @@ var zipCodeLayerName = "Zipcodes"
 
 class ViewController: UIViewController, AGSMapViewTouchDelegate, AGSLayerDelegate {
                             
-    @IBOutlet var mapView:AGSMapView!
-    
-    @IBOutlet var geomView:AGSGeometryView!
+    @IBOutlet weak var mapView:AGSMapView!
+    @IBOutlet weak var geomView:AGSGeometryView!
     
     var selectedGeometries:[AGSGeometry] = []
     var displayPolygon:AGSPolygon?
