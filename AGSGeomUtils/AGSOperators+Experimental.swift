@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import ArcGIS
+
 
 protocol Expandable {}
 protocol Contractible {}

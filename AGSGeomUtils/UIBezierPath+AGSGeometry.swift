@@ -6,6 +6,8 @@
 //  Copyright (c) 2014 Esri. All rights reserved.
 //
 
+import ArcGIS
+
 /// A protocol that drives everything AGSGeometry with UIBezierPath
 @objc protocol HasBezier {
     func bezierForFrame(frame:CGRect) -> UIBezierPath

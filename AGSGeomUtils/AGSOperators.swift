@@ -6,6 +6,7 @@
 //  Copyright (c) 2014 Esri. All rights reserved.
 //
 
+import ArcGIS
 
 /// "Bitwise" Geometry Operators (|, &, ^)
 public func | <T: AGSGeometry, U: AGSGeometry where T: Geometry, U: Geometry, T.Dimension == U.Dimension>(lhs: T, rhs: U) -> T {

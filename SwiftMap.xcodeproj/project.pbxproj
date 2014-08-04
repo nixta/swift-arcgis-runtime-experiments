@@ -152,6 +152,7 @@
 		D9C9B3DD195636CF00B6649E /* AGSDesignableMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AGSDesignableMapView.swift; sourceTree = "<group>"; };
 		D9CFE02C19562F4500AF2893 /* topo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topo.png; sourceTree = "<group>"; };
 		D9E2EF721970845A009151E7 /* UIBezierPath+AGSGeometry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBezierPath+AGSGeometry.swift"; sourceTree = "<group>"; };
+		D9FFCFF919902A1200BC7463 /* arcgis.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = arcgis.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -269,6 +270,7 @@
 				D973873319548C2D007F700A /* Main.storyboard */,
 				D973873619548C2D007F700A /* Images.xcassets */,
 				D973872D19548C2D007F700A /* Supporting Files */,
+				D9FFCFF919902A1200BC7463 /* arcgis.playground */,
 			);
 			path = SwiftMap;
 			sourceTree = "<group>";

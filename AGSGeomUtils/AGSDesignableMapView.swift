@@ -7,6 +7,7 @@
 //
 
 import QuartzCore
+import ArcGIS
 
 @IBDesignable class AGSDesignableMapView: AGSMapView {
     var ibDesignerImage:UIImage?

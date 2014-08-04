@@ -7,6 +7,7 @@
 //
 
 import QuartzCore
+import ArcGIS
 
 @IBDesignable public class AGSGeometryView : UIView {
     @IBInspectable public var lineWidth: CGFloat = 10.0 { didSet { updatePath() } }

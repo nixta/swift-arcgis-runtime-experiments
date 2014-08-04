@@ -6,6 +6,8 @@
 //  Copyright (c) 2014 Esri. All rights reserved.
 //
 
+import ArcGIS
+
 func makeIBGeom() -> AGSPolygon {
     return makePolyFromCoords(nullIslandCoords)
 }
