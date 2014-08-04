@@ -56,12 +56,12 @@ class ViewController: UIViewController, AGSMapViewTouchDelegate, AGSLayerDelegat
             
             if selectedGeometries.count == 0 {
                 displayPolygon = polygon
-                selectedGeometries += polygon
+                selectedGeometries.append(polygon)
             } else {
                 // Track selected polygons
                 var addingPolygon = find(selectedGeometries, polygon) == nil
                 if addingPolygon  {
-                    selectedGeometries += polygon
+                    selectedGeometries.append(polygon)
                 } else {
                     selectedGeometries -= polygon // Using custom -= operator on Array
                 }
@@ -96,7 +96,7 @@ class ViewController: UIViewController, AGSMapViewTouchDelegate, AGSLayerDelegat
     }
 }
 
-@assignment func -=<T:Equatable>(inout lhs: [T], rhs: T) {
+func -=<T:Equatable>(inout lhs: [T], rhs: T) {
     if let index = find(lhs, rhs) {
         lhs.removeAtIndex(index)
     }

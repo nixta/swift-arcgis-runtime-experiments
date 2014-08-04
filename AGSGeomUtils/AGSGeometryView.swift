@@ -77,7 +77,7 @@ import QuartzCore
     }
     
     override public func prepareForInterfaceBuilder()  {
-        if !geometry {
+        if geometry == nil {
             geometry = makeIBGeom()
         }
     }
